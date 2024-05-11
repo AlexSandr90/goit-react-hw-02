@@ -1,12 +1,8 @@
-import { StatsType } from '../../types/StatsType';
+import { FeedbackProps } from '../../types';
 
-type FeedbackProps = {
-  stats: StatsType;
-};
-
-const Feedback = ( {stats}: FeedbackProps): JSX.Element => {
+const Feedback = ({ stats }: FeedbackProps): JSX.Element => {
   console.log(stats);
-  
+
   return (
     <div>
       <p>Good: {stats.good}</p>

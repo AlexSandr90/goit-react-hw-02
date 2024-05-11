@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { Description, Feedback, Options } from './components';
-import { StatsType } from './types/StatsType';
+import { StatsType } from './types';
 
 const App = () => {
   const [stats, setStats] = useState<StatsType>({
@@ -17,10 +17,6 @@ const App = () => {
       [type]: prevStats[type] + 1,
     }));
   };
-
-  // useEffect(() => {
-  //   console.log(stats);
-  // }, [stats]);
 
   return (
     <>

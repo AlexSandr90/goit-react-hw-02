@@ -1,9 +1,5 @@
-import { StatsType } from '../../types/StatsType';
+import { OptionsProps } from '../../types';
 import classes from './Options.module.css';
-
-type OptionsProps = {
-  updateFeedback: (type: keyof StatsType) => void;
-};
 
 const Options = ({ updateFeedback }: OptionsProps): JSX.Element => {
   return (
