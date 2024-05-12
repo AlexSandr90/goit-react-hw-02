@@ -12,4 +12,6 @@ export interface OptionsProps {
 
 export interface FeedbackProps {
   stats: StatsType;
+  totalFeedback: number;
+  positiveFeedbacks: number;
 }

@@ -1,6 +1,10 @@
 import { FeedbackProps } from '../../types';
 
-const Feedback = ({ stats }: FeedbackProps): JSX.Element => {
+const Feedback = ({
+  stats,
+  totalFeedback,
+  positiveFeedbacks,
+}: FeedbackProps): JSX.Element => {
   console.log(stats);
 
   return (
@@ -8,6 +12,8 @@ const Feedback = ({ stats }: FeedbackProps): JSX.Element => {
       <p>Good: {stats.good}</p>
       <p>Neutral: {stats.neutral}</p>
       <p>Bad: {stats.bad}</p>
+      <p>Total: {totalFeedback}</p>
+      <p>Positive: {positiveFeedbacks}%</p>
     </div>
   );
 };
