@@ -5,8 +5,6 @@ const Feedback = ({
   totalFeedback,
   positiveFeedbacks,
 }: FeedbackProps): JSX.Element => {
-  console.log(stats);
-
   return (
     <div>
       <p>Good: {stats.good}</p>
