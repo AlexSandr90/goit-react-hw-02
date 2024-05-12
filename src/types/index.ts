@@ -6,6 +6,7 @@ export interface StatsType {
 
 export interface OptionsProps {
   updateFeedback: (type: keyof StatsType) => void;
+  resetFeedback: () => void;
 }
 
 export interface FeedbackProps {
