@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Description, Feedback, Options } from './components';
+import { Description, Feedback, Notification, Options } from './components';
 import { StatsType } from './types';
 
 const App = () => {
@@ -10,19 +10,22 @@ const App = () => {
     bad: 0,
   });
 
+  const { bad, good, neutral } = stats;
+
   const updateFeedback = (type: keyof StatsType) => {
-    //@ts-ignore
-    setStats(prevStats => ({
+    setStats((prevStats: StatsType) => ({
       ...prevStats,
       [type]: prevStats[type] + 1,
     }));
   };
 
+  const totalFeedback = bad + good + neutral;
+
   return (
     <>
       <Description />
       <Options updateFeedback={updateFeedback} />
-      <Feedback stats={stats} />
+      {totalFeedback > 0 ? <Feedback stats={stats} /> : <Notification />}
     </>
   );
 };
